@@ -30,4 +30,10 @@ public class NetAudioFragment extends BaseFragment{
         Log.e("TAG","网络音频数据初始化了....");
         textView.setText("网络音乐");
     }
+    @Override
+    public void onRefrshData() {
+        super.onRefrshData();
+        textView.setText("网络音频刷新");
+//        Log.e("TAG","onHiddenChanged。。"+this.toString());
+    }
 }

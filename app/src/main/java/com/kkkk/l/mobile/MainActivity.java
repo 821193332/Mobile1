@@ -1,9 +1,13 @@
 package com.kkkk.l.mobile;
-
+import android.Manifest;
+import android.app.Activity;
+import android.content.pm.PackageManager;
+import android.os.Build;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.RadioGroup;
 
 import com.kkkk.l.mobile.base.BaseFragment;
@@ -14,11 +18,13 @@ import com.kkkk.l.mobile.fragment.NetVideoFragment;
 
 import java.util.ArrayList;
 
+
 public class MainActivity extends AppCompatActivity {
     private RadioGroup rg_main;
     private ArrayList<BaseFragment> fragments;
     private  int position;
     private Fragment tempFragment;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,5 +89,24 @@ public class MainActivity extends AppCompatActivity {
         fragments.add(new LocalAudioFragment());
         fragments.add(new NetAudioFragment());
         fragments.add(new NetVideoFragment());
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.e("TAG","onDestroy");
+    }
+    public static boolean isGrantExternaIRW(Activity activity){
+      if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.M && activity.checkSelfPermission
+              (Manifest.permission.WRITE_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED){
+          activity.requestPermissions(new String[]{
+                          Manifest.permission.READ_EXTERNAL_STORAGE,
+                          Manifest.permission.READ_EXTERNAL_STORAGE,
+
+
+          },1);
+          return  false;
+      }
+        return  true;
     }
 }

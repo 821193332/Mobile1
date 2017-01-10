@@ -8,11 +8,12 @@ import android.widget.TextView;
 
 import com.kkkk.l.mobile.base.BaseFragment;
 
+
 /**
  * Created by KangYueLong on 2017/1/6.
  */
 
-public class LocalAudioFragment extends BaseFragment{
+public class LocalAudioFragment extends BaseFragment {
     private TextView textView;
     @Override
     public View initView() {
@@ -29,5 +30,14 @@ public class LocalAudioFragment extends BaseFragment{
         super.initData();
         Log.e("TAG","本地音频数据初始化了。。");
         textView.setText("本地音频");
+    }
+
+
+
+    @Override
+    public void onRefrshData() {
+        super.onRefrshData();
+        textView.setText("本地音频刷新");
+//        Log.e("TAG","onHiddenChanged。。"+this.toString());
     }
 }
