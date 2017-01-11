@@ -9,7 +9,14 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/MaterialRefreshLayout" />
+            <option value="$PROJECT_DIR$/MaterualRefresh_library" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/startallvideoplayer" />
+            <option value="$PROJECT_DIR$/vitamio" />
+            <option value="$PROJECT_DIR$/vitamio-sample" />
+            <option value="$PROJECT_DIR$/xUtils3-master" />
+            <option value="$PROJECT_DIR$/xutils" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

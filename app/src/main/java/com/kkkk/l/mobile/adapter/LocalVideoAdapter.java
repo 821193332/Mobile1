@@ -14,12 +14,6 @@ import com.kkkk.l.mobile.utils.Utils;
 
 import java.util.ArrayList;
 
-/**
- * 作者：尚硅谷-杨光福 on 2017/1/7 11:48
- * 微信：yangguangfu520
- * QQ号：541433511
- * 作用：本地视频的适配器
- */
 public class LocalVideoAdapter extends BaseAdapter {
     private final Context mContext;
     private final ArrayList<MediaItem> datas;

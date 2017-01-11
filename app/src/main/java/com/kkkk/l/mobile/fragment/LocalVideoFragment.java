@@ -75,21 +75,7 @@ public class LocalVideoFragment extends BaseFragment {
         @Override
         public void onItemClick(AdapterView<?> parent,View view, int position, long id) {
             MediaItem mediaItem = mediaItems.get(position);
-//            Toast.makeText(mContext, "mediaItem=="+mediaItem.toString(), Toast.LENGTH_SHORT).show();
-            //
-            //1.调起系统的播放器播放视频--隐式意图
-//            Intent intent = new Intent();
-//            //第一参数：播放路径
-//            //第二参数：路径对应的类型
-//            intent.setDataAndType(Uri.parse(mediaItem.getData()),"video/*");
-//            startActivity(intent);
-            //2.调起自定义播放器
-//            Intent intent = new Intent(mContext,SystemVideoPlayerActivity.class);
-//            //第一参数：播放路径
-//            //第二参数：路径对应的类型
-//            intent.setDataAndType(Uri.parse(mediaItem.getData()),"video/*");//一个播放地址
-//            startActivity(intent);
-            //3.传递列表数据
+
             Intent intent = new Intent(mContext,SystemVideoPlayerActivity.class);
 
             Bundle bundle = new Bundle();

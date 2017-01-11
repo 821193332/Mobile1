@@ -4,12 +4,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.ViewGroup;
 
-/**
- * 作者：尚硅谷-杨光福 on 2017/1/9 14:41
- * 微信：yangguangfu520
- * QQ号：541433511
- * 作用：自定义VideoView
- */
+
 public class VideoView extends android.widget.VideoView {
     public VideoView(Context context, AttributeSet attrs) {
         super(context, attrs);

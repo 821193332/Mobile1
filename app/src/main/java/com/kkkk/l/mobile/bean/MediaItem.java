@@ -2,12 +2,7 @@ package com.kkkk.l.mobile.bean;
 
 import java.io.Serializable;
 
-/**
- * 作者：尚硅谷-杨光福 on 2017/1/7 11:39
- * 微信：yangguangfu520
- * QQ号：541433511
- * 作用： 代码一个视频或者音频
- */
+
 public class MediaItem implements Serializable{
 
     String name ;
@@ -15,7 +10,22 @@ public class MediaItem implements Serializable{
     long size ;
     String data ;
     String artist ;
+    String heightUrl;
+    String desc;
+    String imageUrl;
+    public String getHeightUrl() {
+        return heightUrl;
+    }
+    public void setHeightUrl(String heightUrl) {
+        this.heightUrl = heightUrl;
+    }
+    public String getDesc() {
+        return desc;
+    }
 
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
     public String getName() {
         return name;
     }
@@ -55,6 +65,13 @@ public class MediaItem implements Serializable{
     public void setArtist(String artist) {
         this.artist = artist;
     }
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
 
     @Override
     public String toString() {
@@ -64,6 +81,8 @@ public class MediaItem implements Serializable{
                 ", size=" + size +
                 ", data='" + data + '\'' +
                 ", artist='" + artist + '\'' +
+                ", imageUrl='" + imageUrl + '\'' +
+                ", desc='" + desc + '\'' +
                 '}';
     }
 }
