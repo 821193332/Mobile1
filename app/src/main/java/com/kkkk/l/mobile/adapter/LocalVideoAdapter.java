@@ -17,12 +17,14 @@ import java.util.ArrayList;
 public class LocalVideoAdapter extends BaseAdapter {
     private final Context mContext;
     private final ArrayList<MediaItem> datas;
+    private final boolean isVideo;
     private Utils utils;
 
-    public LocalVideoAdapter(Context mContext, ArrayList<MediaItem> mediaItems) {
+    public LocalVideoAdapter(Context mContext, ArrayList<MediaItem> mediaItems, boolean b) {
         this.mContext = mContext;
         this.datas = mediaItems;
         utils = new Utils();
+        this.isVideo =b;
     }
 
     @Override
@@ -63,7 +65,9 @@ public class LocalVideoAdapter extends BaseAdapter {
         viewHolder.tv_size.setText(Formatter.formatFileSize(mContext,mediaItem.getSize()));
         //设置时间
         viewHolder.tv_duration.setText(utils.stringForTime((int) mediaItem.getDuration()));
-
+    if (!isVideo){
+        viewHolder.iv_icon.setImageResource(R.drawable.music_default_bg);
+    }
 
         return convertView;
     }
